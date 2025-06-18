@@ -1,0 +1,6 @@
+brithtness 10
+contrast    8
+saturation 25
+brilliance or explosur 10
+sharp      44
+clarity   20

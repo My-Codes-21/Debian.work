@@ -1,0 +1,3 @@
+file: D:\G5\Grand Theft Auto V\steam_api64.dll
+
+file: K:\G5\Grand Theft Auto V\steam_api64.dll

